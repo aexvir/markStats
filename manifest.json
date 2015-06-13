@@ -13,7 +13,7 @@
   "default_locale": "en",
   "page_action": {
     "default_icon": "icons/icon19.png",
-    "default_title": "Running markStats",
+    "default_title": "Running markStats"
   },
   "permissions": [
     "contentSettings",

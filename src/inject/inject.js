@@ -128,30 +128,49 @@ $(document).on('click', '#findStudent', function(event) {
 				TweenMax.to($('#studentInfo'),0.35,{delay:0.7,ease: Expo.easeOut,display:'block',opacity:1});
 			}
 			/*It's position on the histohram is highlighted*/
+			TweenMax.to($('.bar'),1,{ease: Expo.easeOut,backgroundColor:'#d64937'});
 			for (var j = 10; j > 0; j--) {
 				if(scannedData[i].mark > $('#value'+j).html()){
-					TweenMax.to($('#bar'+j),1,{delay:1.25,ease: Expo.easeOut,backgroundColor:'#fff'});
-				} else {
-					TweenMax.to($('#bar'+j),1,{delay:1.25,ease: Expo.easeOut,backgroundColor:'#d64937'});
+					if(!extended2)
+						TweenMax.to($('#bar'+j),1,{delay:1.25,ease: Expo.easeOut,backgroundColor:'#fff'});
+					else
+						TweenMax.to($('#bar'+j),1,{ease: Expo.easeOut,backgroundColor:'#fff'});
+					break;
 				}
 			};
-			extended2 = true;
 			break;
 		}
 		/*If the student isn't found the user is alerted*/
 		if(scannedData[i].name.toLowerCase().search($('#studentName').val().toLowerCase()) < 0 && i==0)
 			alert('No se ha encontrado ninguna nota con ese nombre, es posible que haya algún error en el nombre introducido o que no se haya evaluado al alumno.');
 	};
+	extended2 = true;
 });
 /*Nice animation thats shows the best 5 marks when the mouse hovers the histogram*/
 $(document).on('mouseenter', '#main', function(event) {
 	event.preventDefault();
-	TweenMax.to($('#main'),0.5,{ease: Expo.easeOut,opacity:0,display:'none'});
-	TweenMax.to($('#secondary'),0.5,{delay:0.55,ease: Expo.easeOut,display:'table',opacity:1});
+	TweenMax.to($('#main'),0.25,{ease: Expo.easeOut,opacity:0,display:'none'});
+	TweenMax.to($('#secondary'),0.25,{delay:0.255,ease: Expo.easeOut,display:'table',opacity:1});
 });
 $(document).on('mouseleave', '#secondary', function(event) {
 	event.preventDefault();
-	TweenMax.to($('#secondary'),0.5,{ease: Expo.easeOut,opacity:0,display:'none'});
-	TweenMax.to($('#main'),0.5,{delay:0.55,ease: Expo.easeOut,display:'table',opacity:1});
+	TweenMax.to($('#secondary'),0.25,{ease: Expo.easeOut,opacity:0,display:'none'});
+	TweenMax.to($('#main'),0.25,{delay:0.255,ease: Expo.easeOut,display:'table',opacity:1});
+});
+/*Shows the author informarion*/
+$(document).on('click', '#info', function(event) {
+	event.preventDefault();
+	$('body').append('<div id="infoPanel"></div>');
+	$('#infoPanel').load(chrome.extension.getURL('src/inject/infopanel.html'));
+	TweenMax.to($('#infoPanel'),0.5,{ease: Expo.easeOut,display:'flex',opacity:1});
+});
+$(document).on('click', '#close', function(event) {
+	event.preventDefault();
+	TweenMax.to($('#infoPanel'),0.5,{ease: Expo.easeOut,opacity:0,display:'none'});
+	TweenMax.to($('#panel'),0.5,{ease: Expo.easeOut,opacity:0});
+});
+$(document).on('click', '#closeInfo', function(event) {
+	event.preventDefault();
+	TweenMax.to($('#infoPanel'),0.5,{ease: Expo.easeOut,opacity:0,display:'none'});
 });
 });

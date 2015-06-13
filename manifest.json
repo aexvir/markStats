@@ -41,5 +41,8 @@
       ]
     }
   ],
-  "web_accessible_resources": ["src/inject/inject.html"]
+  "web_accessible_resources": [
+    "src/inject/inject.html",
+    "src/inject/infopanel.html"
+    ]
 }

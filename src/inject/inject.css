@@ -1,3 +1,4 @@
+button{cursor: pointer;}
 #panel{
 	position: fixed;
 	background: #2d2d2d;
@@ -20,6 +21,97 @@
 	opacity: 0;
 	top:-50vh;
 	padding-bottom: 10px;
+}
+#info,#close,#closeInfo{
+	position: absolute;
+	top: 15px;
+	height: 25px;
+	width: 25px;
+	font-weight: bold;
+	line-height: 25px;
+	background: #444;
+	color: #fff;
+	border: none;
+	margin: none;
+	padding: none;
+	border-radius: 50%;
+	box-shadow: 0px 0px 15px 0px #000;
+}
+#info{
+	left: -40px;
+}
+#close{
+	right: -40px;
+}
+#infoPanel{
+	position: absolute;
+	height: 350px;
+	width: 450px;
+	margin: 0 auto;
+	left: 0;
+	right: 0;
+	top: calc(50vh - 175px);
+	background: #199DA4;
+	box-shadow: 0px 0px 15px 0px #000;
+	border-radius: 5px;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	align-items: center;
+	align-content: center;
+	color: #fff;
+	font-size: 16px;
+	font-weight: bold;
+	display: none;
+	opacity: 0;
+}
+#authorInfo{
+	width: 95%;
+	margin-bottom: 10px;
+	text-align: center;
+}
+#closeInfo{
+	background: #199DA4;
+	top: 10px;
+	left: 10px;
+	box-shadow: 0px 0px 15px 0px #222;
+}
+#github{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-around;
+	align-items: center;
+	align-content: center;
+	color: #fff;
+	width: 150px;
+	height: 35px;
+	background: #D32232;
+	text-decoration: none;
+	box-shadow: 0px 0px 15px 0px #222;
+	border-radius: 2px;
+	padding-left: 5px;
+	padding-right: 5px;
+	transition: all 0.25s ease-in-out;
+}
+#github:hover{
+	background: #2d2d2d;
+}
+#github img{
+	max-height: 20px;
+}
+#infoPanel a{
+	text-decoration: none;
+	color: #fff;
+}
+#logo{
+	width: 80%;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+#logo img{
+	max-width: 100%;
 }
 #stats,#filter,#graphic,#filterRow,#studentInfo,#secondary{
 	opacity: 0;
@@ -63,7 +155,7 @@
 	width: 80%;
 	margin-bottom: 10px;
 }
-#filter:hover,#calculate:hover,#findStudent:hover,#studentName:hover,#maxScore:hover{
+#filter:hover,#calculate:hover,#findStudent:hover,#studentName:hover,#maxScore:hover,#info:hover{
 	background: #555;
 }
 table,#startRow,#filterRow{

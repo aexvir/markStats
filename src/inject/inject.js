@@ -167,7 +167,8 @@ $(document).on('click', '#info', function(event) {
 $(document).on('click', '#close', function(event) {
 	event.preventDefault();
 	TweenMax.to($('#infoPanel'),0.5,{ease: Expo.easeOut,opacity:0,display:'none'});
-	TweenMax.to($('#panel'),0.5,{ease: Expo.easeOut,opacity:0});
+	TweenMax.to($('#panel'),0.5,{ease: Expo.easeOut,opacity:0,display:'none'});
+	setTimeout(function(){$('#panel').remove();},500);
 });
 $(document).on('click', '#closeInfo', function(event) {
 	event.preventDefault();

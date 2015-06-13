@@ -2,6 +2,7 @@ chrome.extension.sendMessage({}, function(response) {
 	/*Variables where data will be stored*/
 	var scannedData = [];
 	var average = 0;
+	var subjectName;
 	/*Variables that store if the panel has been extended*/
 	var extended1 = false;
 	var extended2 = false;
@@ -9,9 +10,9 @@ chrome.extension.sendMessage({}, function(response) {
 	var readyStateCheckInterval = setInterval(function() {
 		if (document.readyState === "complete") {
 			clearInterval(readyStateCheckInterval);
-			tempTitle = $('.cabpagina').html(); //The subject name is stored
-			$('.cabpagina').html('<button id="statsButton">inf</button>'); //Button that opens the panel
-			$('.cabpagina').append('<div id="subjectName">'+tempTitle+'</div>'); //An id is added to the subject name to be accesible easily
+			subjectName = $('.cabpagina').html(); //The subject name is stored
+			$('.cabpagina').html('<button id="statsButton">i</button>'); //Button that opens the panel
+			$('.cabpagina').append(subjectName);
 		}
 	}, 10);
 
@@ -35,7 +36,6 @@ chrome.extension.sendMessage({}, function(response) {
 		/*Panel inner HTML structure is loaded from the file inject.html*/
 		$('#panel').load(chrome.extension.getURL('src/inject/inject.html'), function(){
 			/*Subject and exam names are set to their positions in the panel*/
-			var subjectName = $('#subjectName').html();
 			var examName = $('.container h2').html();
 			examName = examName.substr(0,examName.search("&nbsp"));
 			/*Setting the names on the panel itself*/

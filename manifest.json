@@ -12,13 +12,10 @@
   },
   "default_locale": "en",
   "page_action": {
-    "default_icon": "icons/icon19.png",
+    "default_icon": "icons/icon16.png",
     "default_title": "Running markStats"
   },
   "permissions": [
-    "contentSettings",
-    "cookies",
-    "tabs",
     "https://intranet.upv.es/pls/soalu/sic_asi.listado_notas*"
   ],
   "content_scripts": [

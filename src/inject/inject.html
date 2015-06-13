@@ -1,0 +1,113 @@
+<button id="info">
+	
+</button>
+<div id="subject">Asignatura</div>
+<div id="exam">Examen</div>
+<div class="component" id="startRow">
+	<input type="text" id="maxScore" onclick="this.value='';" onfocus="this.select()" onblur="this.value=!this.value?'Nota máxima':this.value;" value="Nota máxima">
+	<button id="calculate">Calcular</button>
+</div>
+<div class="component" id="stats">
+	<div class="title">-Estadísticas-</div>
+	<div class="content">
+		<table>
+			<tr>
+				<td>Total de alumnos:</td>
+				<td id="numStudents"></td>
+			</tr>
+			<tr>
+				<td>Alumnos aprobados:</td>
+				<td id="numPassed"></td>
+			</tr>
+			<tr>
+				<td>Alumnos suspendidos:</td>
+				<td id="numFailed"></td>
+			</tr>
+			<tr>
+				<td>Media:</td>
+				<td id="average"></td>
+			</tr>
+		</table>
+	</div>
+</div>
+<div class="component" id="graphic">
+	<div class="title">-Histograma-</div>
+	<div id="containter">
+		<table id="main">
+			<tr id="bars">
+				<td id="num1"><div class="bar" id="bar1"></td>
+				<td id="num2"><div class="bar" id="bar2"></td>
+				<td id="num3"><div class="bar" id="bar3"></td>
+				<td id="num4"><div class="bar" id="bar4"></td>
+				<td id="num5"><div class="bar" id="bar5"></td>
+				<td id="num6"><div class="bar" id="bar6"></td>
+				<td id="num7"><div class="bar" id="bar7"></td>
+				<td id="num8"><div class="bar" id="bar8"></td>
+				<td id="num9"><div class="bar" id="bar9"></td>
+				<td id="num10"><div class="bar" id="bar10"></td>
+			</tr>
+			<tr id="vals">
+				<td><div class="value" id="value1"></td>
+				<td><div class="value" id="value2"></td>
+				<td><div class="value" id="value3"></td>
+				<td><div class="value" id="value4"></td>
+				<td><div class="value" id="value5"></td>
+				<td><div class="value" id="value6"></td>
+				<td><div class="value" id="value7"></td>
+				<td><div class="value" id="value8"></td>
+				<td><div class="value" id="value9"></td>
+				<td><div class="value" id="value10"></td>
+			</tr>
+		</table>
+		<table id="secondary">
+			<tr>
+				<td>5 Mejores notas</td>
+			</tr>
+			<tr>
+				<td id="bestMarkName1">prueba</td>
+				<td id="bestMarkScore1">1</td>
+			</tr>
+			<tr>
+				<td id="bestMarkName2">prueba</td>
+				<td id="bestMarkScore2">2</td>
+			</tr>
+			<tr>
+				<td id="bestMarkName3">prueba</td>
+				<td id="bestMarkScore3">4</td>
+			</tr>
+			<tr>
+				<td id="bestMarkName4">prueba</td>
+				<td id="bestMarkScore4">1</td>
+			</tr>
+			<tr>
+				<td id="bestMarkName5">prueba</td>
+				<td id="bestMarkScore5">9</td>
+			</tr>
+		</table>
+	</div>
+</div>
+<!-- <button id="filter">Filtrar</button> -->
+<div class="component" id="filterRow">
+	<input type="text" id="studentName" onclick="this.value='';" onfocus="this.select()" onblur="this.value=!this.value?'Nombre o Apellido':this.value;" value="Nombre o Apellido">
+	<button id="findStudent">Búscame</button>
+</div>
+<div class="component" id="studentInfo">
+	<table>
+		<tr>
+			<td>Nombre:</td>
+			<td id="name"></td>
+		</tr>
+		<tr>
+			<td>Nota:</td>
+			<td id="mark"></td>
+		</tr>
+		<tr>
+			<td>Posición absoluta:</td>
+			<td id="absolutePosition"></td>
+		</tr>
+		<tr>
+			<td>Posición relativa:</td>
+			<td id="relativePosition"></td>
+		</tr>
+	</table>
+</div>

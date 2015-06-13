@@ -1,0 +1,122 @@
+#panel{
+	position: fixed;
+	background: #2d2d2d;
+	color: #fff;
+	font-weight: bold;
+	top: 0px;
+	left: 0;
+	right: 0;
+	height: auto;
+	width: 550px;
+	margin: 0 auto;
+	border-radius: 0px 0px 5px 5px;
+	box-shadow: 0px 0px 15px 0px #000;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	align-items: center;
+	align-content: center;
+	opacity: 0;
+	top:-50vh;
+	padding-bottom: 10px;
+}
+#stats,#filter,#graphic,#filterRow,#studentInfo,#secondary{
+	opacity: 0;
+	display: none;
+}
+#subject,#exam,.title,#filter,#studentName{
+	text-align: center;
+}
+.component,.title{
+	width: 530px;
+}
+.component{
+	padding: 10px;
+}
+#subject{
+	font-size: 25px;
+	padding-top: 10px;
+}
+#exam{
+	font-size: 18px;
+	color: #bbb;
+	padding-bottom: 10px;
+}
+.title{
+	height: 25px;
+	font-size: 14px;
+	line-height: 25px;
+	border-top: 1px solid #444;
+}
+#filter,#calculate,#findStudent,#studentName,#maxScore{
+	height: 25px;
+	background: #444;
+	color: #fff;
+	border: none;
+	margin: none;
+	padding: none;
+	border-radius: 2px;
+	font-weight: bold;
+}
+#filter{
+	width: 80%;
+	margin-bottom: 10px;
+}
+#filter:hover,#calculate:hover,#findStudent:hover,#studentName:hover,#maxScore:hover{
+	background: #555;
+}
+table,#startRow,#filterRow{
+	width: 80%;
+	font-size: 14px;
+	margin: 0 auto;
+	left: 0;
+	right: 0;
+}
+#startRow,#filterRow{
+	text-align: center;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+#studentName{
+	width: 250px;
+}
+#maxScore{
+	width: 100px;
+	text-align: center;
+}
+#bars{
+	height: 100px;
+	vertical-align: bottom;
+	line-height: -20px;
+}
+#bars,#vals{
+	text-align: center;
+}
+#bars td, #values td{
+	width: 10%;
+}
+.value{
+	height: 20px;
+	border-radius: 0px 0px 2px 2px;
+	background: #444;
+	vertical-align: middle;
+}
+.bar{
+	display: block;
+	background: #d64937;
+	border-radius: 2px 2px 0px 0px ;
+	height: 0px;
+}
+#containter{
+	height: 125px;
+	/*display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: flex-end
+	align-content: flex-end;*/
+}
+#main,#secondary{
+	height: 100%;
+}

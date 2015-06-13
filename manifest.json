@@ -1,0 +1,45 @@
+{
+  "name": "UPV - Estadísticas",
+  "author": "Alexandru Constantin Viscreanu",
+  "version": "1.0",
+  "manifest_version": 2,
+  "description": "Esta extensión permite obtener estadísticas de las notas publicadas en la intranet de la UPV.",
+  "homepage_url": "http://proudh0n.github.io",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "default_locale": "en",
+  "page_action": {
+    "default_icon": "icons/icon19.png",
+    "default_title": "Running markStats",
+  },
+  "permissions": [
+    "contentSettings",
+    "cookies",
+    "tabs",
+    "https://intranet.upv.es/pls/soalu/sic_asi.listado_notas*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://intranet.upv.es/pls/soalu/sic_asi.listado_notas*"
+      ],
+      "css": [
+        "src/inject/inject.css"
+      ]
+    },
+    {
+      "matches": [
+        "https://intranet.upv.es/pls/soalu/sic_asi.listado_notas*"
+      ],
+      "js": [
+        "src/inject/inject.js",
+        "js/jQuery.js",
+        "js/tweenmax.js"
+      ]
+    }
+  ],
+  "web_accessible_resources": ["src/inject/inject.html"]
+}
